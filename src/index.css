@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: "Google Sans", sans-serif;
+    --bg: radial-gradient(1200px 600px at 20% 40%, rgba(124, 59, 240, 0.12), transparent 20%),
+      radial-gradient(900px 500px at 80% 60%, rgba(83, 34, 233, 0.08), transparent 25%),
+      #080117;
+    --text: #f3f4f6;
+    --muted: #bdb6c7;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow-lg: 0 20px 50px rgba(7, 4, 20, 0.6);
+    --glass: rgba(255, 255, 255, 0.06);
+    --accent: linear-gradient(90deg, rgba(124, 59, 240, 1) 0%, rgba(114, 38, 237, 1) 40%, rgba(83, 34, 233, 1) 100%);
+    color-scheme: dark;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: linear-gradient(180deg, #f7f7fb, #fff);
+      --text: #111827;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
